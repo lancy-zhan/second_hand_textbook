@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "listings#index"
   # Routes for the Transaction resource:
 
   # CREATE
