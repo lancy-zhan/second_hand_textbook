@@ -5,4 +5,6 @@ class Listing < ApplicationRecord
 
   # Validations
 
+  validates :tittle, :presence => true
+
 end
