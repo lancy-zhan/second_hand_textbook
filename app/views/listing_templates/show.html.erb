@@ -92,7 +92,11 @@
       </dt>
       <!-- Display creator_id start -->
       <dd>
-        <%= @listing.creator_id %>
+        <% if @listing.creator.present? %>
+          <a href="/users/<%= @listing.creator_id %>">
+            <%= @listing.creator.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display creator_id end -->
 

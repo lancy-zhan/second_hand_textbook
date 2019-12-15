@@ -126,7 +126,11 @@
 
         <!-- Display listing.creator_id start -->
         <td>
-          <%= listing.creator.email %>
+          <% if listing.creator.present? %>
+            <a href="/users/<%= listing.creator.id %>">
+              <%= listing.creator.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display listing.creator_id end -->
 
