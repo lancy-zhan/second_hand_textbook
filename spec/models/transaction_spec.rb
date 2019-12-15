@@ -12,6 +12,8 @@ RSpec.describe Transaction, type: :model do
 
     describe "Validations" do
 
+    it { should validate_presence_of(:buyer_id) }
+
     it { should validate_presence_of(:seller_id) }
       
     end
