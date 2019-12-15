@@ -1,0 +1,120 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "listings_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :transaction_id, "Transaction" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :transaction_id_gteq, :class => "form-control", :placeholder => "Transaction greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :transaction_id_lteq, :class => "form-control", :placeholder => "Transaction less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tittle_cont, "Tittle contains" %>
+    <%= f.text_field :tittle_cont, :class => "form-control", :placeholder => "Tittle contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :school_year_cont, "School year contains" %>
+    <%= f.text_field :school_year_cont, :class => "form-control", :placeholder => "School year contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quarter_cont, "Quarter contains" %>
+    <%= f.text_field :quarter_cont, :class => "form-control", :placeholder => "Quarter contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description_cont, "Description contains" %>
+    <%= f.text_field :description_cont, :class => "form-control", :placeholder => "Description contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price, "Price" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :price_gteq, :class => "form-control", :placeholder => "Price greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :price_lteq, :class => "form-control", :placeholder => "Price less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :course_cont, "Course contains" %>
+    <%= f.text_field :course_cont, :class => "form-control", :placeholder => "Course contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :isbn, "Isbn" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :isbn_gteq, :class => "form-control", :placeholder => "Isbn greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :isbn_lteq, :class => "form-control", :placeholder => "Isbn less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+  <div class="form-group">
+    <%= f.label :creator_email_cont, "User email contains" %>
+    <%= f.text_field :creator_email_cont, :class => "form-control", :placeholder => "User email contains" %>
+  </div>
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/listings" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#listings_filters">
+  Show filters
+</a>
