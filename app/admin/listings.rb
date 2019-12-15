@@ -1,4 +1,6 @@
 ActiveAdmin.register Listing do
+
+ permit_params :transaction_id, :isbn, :course, :photo_url, :price, :description, :creator_id, :quarter, :school_year, :tittle
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
