@@ -11,6 +11,8 @@ RSpec.describe User, type: :model do
     end
 
     describe "Validations" do
+
+    it { should validate_length_of(:username).is_at_least(4).is_at_most(20) }
       
     end
 end
