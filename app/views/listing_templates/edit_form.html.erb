@@ -82,15 +82,6 @@
   <!-- Label and input for description end -->
 
   <!-- Label and input for creator_id start -->
-  <div class="form-group">
-    <label for="creator_id">
-      Creator
-    </label>
-
-    <!-- Input for creator_id start -->
-    <%= select_tag(:creator_id, options_from_collection_for_select(User.all, :id, :email, @listing.creator_id), :class => "form-control") %>
-    <!-- Input for creator_id end -->
-  </div>
   <!-- Label and input for creator_id end -->
 
   <!-- Label and input for quarter start -->

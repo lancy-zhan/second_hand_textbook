@@ -55,7 +55,7 @@ class ListingsController < ApplicationController
     @listing.photo_url = params.fetch("photo_url") if params.key?("photo_url")
     @listing.price = params.fetch("price")
     @listing.description = params.fetch("description")
-    @listing.creator_id = params.fetch("creator_id")
+    
     @listing.quarter = params.fetch("quarter")
     @listing.school_year = params.fetch("school_year")
     @listing.tittle = params.fetch("tittle")
