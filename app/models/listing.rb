@@ -1,6 +1,10 @@
 class Listing < ApplicationRecord
   # Direct associations
 
+  belongs_to :creator,
+             :class_name => "User",
+             :counter_cache => true
+
   # Indirect associations
 
   # Validations
