@@ -69,6 +69,14 @@ class ListingsController < ApplicationController
     end
   end
 
+  def destroy_row_from_creator
+    @listing = Listing.find(params.fetch("id_to_remove"))
+
+    @listing.destroy
+
+    redirect_to("/users/#{@listing.creator_id}", notice: "Listing deleted successfully.")
+  end
+
   def destroy_row
     @listing = Listing.find(params.fetch("id_to_remove"))
 
