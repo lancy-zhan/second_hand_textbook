@@ -1,0 +1,145 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Listing #<%= @listing.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/listings" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link listing start -->
+      <div class="col">
+        <a href="/listings/<%= @listing.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit listing
+        </a>
+      </div>
+      <!-- Edit link listing end -->
+
+      <!-- Delete link listing start -->
+      <div class="col">
+        <a href="/delete_listing/<%= @listing.id %>" class="btn btn-block btn-outline-secondary">
+          Delete listing
+        </a>
+      </div>
+      <!-- Delete link listing end -->
+    </div>
+
+    <dl>
+      <dt>
+        Transaction
+      </dt>
+      <!-- Display transaction_id start -->
+      <dd>
+        <%= @listing.transaction_id %>
+      </dd>
+      <!-- Display transaction_id end -->
+
+      <dt>
+        Isbn
+      </dt>
+      <!-- Display isbn start -->
+      <dd>
+        <%= @listing.isbn %>
+      </dd>
+      <!-- Display isbn end -->
+
+      <dt>
+        Course
+      </dt>
+      <!-- Display course start -->
+      <dd>
+        <%= @listing.course %>
+      </dd>
+      <!-- Display course end -->
+
+      <dt>
+        Photo url
+      </dt>
+      <!-- Display photo_url start -->
+      <dd>
+        <%= @listing.photo_url %>
+      </dd>
+      <!-- Display photo_url end -->
+
+      <dt>
+        Price
+      </dt>
+      <!-- Display price start -->
+      <dd>
+        <%= @listing.price %>
+      </dd>
+      <!-- Display price end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @listing.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Creator
+      </dt>
+      <!-- Display creator_id start -->
+      <dd>
+        <%= @listing.creator_id %>
+      </dd>
+      <!-- Display creator_id end -->
+
+      <dt>
+        Quarter
+      </dt>
+      <!-- Display quarter start -->
+      <dd>
+        <%= @listing.quarter %>
+      </dd>
+      <!-- Display quarter end -->
+
+      <dt>
+        School year
+      </dt>
+      <!-- Display school_year start -->
+      <dd>
+        <%= @listing.school_year %>
+      </dd>
+      <!-- Display school_year end -->
+
+      <dt>
+        Tittle
+      </dt>
+      <!-- Display tittle start -->
+      <dd>
+        <%= @listing.tittle %>
+      </dd>
+      <!-- Display tittle end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@listing.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@listing.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
