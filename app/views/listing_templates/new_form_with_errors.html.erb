@@ -99,7 +99,7 @@
     </label>
 
     <!-- Input for creator_id start -->
-    <input type="text" id="creator_id" name="creator_id" class="form-control" value="<%= @listing.creator_id %>">
+    <%= select_tag(:creator_id, options_from_collection_for_select(User.all, :id, :email, @listing.creator_id), :class => "form-control") %>
     <!-- Input for creator_id end -->
   </div>
   <!-- Label and input for creator_id end -->
