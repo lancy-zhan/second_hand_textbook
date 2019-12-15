@@ -4,121 +4,81 @@
 
 <hr>
 
-<!-- Form listing start -->
 <form action="/update_listing/<%= @listing.id %>" method="post" enctype="multipart/form-data">
-<!-- Form listing end -->
 
-  <!-- Label and input for transaction_id start -->
   <div class="form-group">
     <label for="transaction_id">
       Transaction
     </label>
 
-    <!-- Input for transaction_id start -->
     <input type="text" id="transaction_id" name="transaction_id" class="form-control" value="<%= @listing.transaction_id %>">
-    <!-- Input for transaction_id end -->
   </div>
-  <!-- Label and input for transaction_id end -->
 
-  <!-- Label and input for isbn start -->
   <div class="form-group">
     <label for="isbn">
       Isbn
     </label>
 
-    <!-- Input for isbn start -->
     <input type="text" id="isbn" name="isbn" class="form-control" value="<%= @listing.isbn %>">
-    <!-- Input for isbn end -->
   </div>
-  <!-- Label and input for isbn end -->
 
-  <!-- Label and input for course start -->
   <div class="form-group">
     <label for="course">
       Course
     </label>
 
-    <!-- Input for course start -->
     <input type="text" id="course" name="course" class="form-control" value="<%= @listing.course %>">
-    <!-- Input for course end -->
   </div>
-  <!-- Label and input for course end -->
 
-  <!-- Label and input for photo_url start -->
   <div class="form-group">
     <label for="photo_url">
       Photo url
     </label>
 
-    <!-- Input for photo_url start -->
     <%= cl_image_tag(@listing.photo_url.to_s, :width => 90, :height => 90, :crop => :thumb) %>
     <input type="file" id="photo_url" name="photo_url" class="form-control">
-    <!-- Input for photo_url end -->
   </div>
-  <!-- Label and input for photo_url end -->
 
-  <!-- Label and input for price start -->
   <div class="form-group">
     <label for="price">
       Price
     </label>
 
-    <!-- Input for price start -->
     <input type="text" id="price" name="price" class="form-control" value="<%= @listing.price %>">
-    <!-- Input for price end -->
   </div>
-  <!-- Label and input for price end -->
 
-  <!-- Label and input for description start -->
   <div class="form-group">
     <label for="description">
       Description
     </label>
 
-    <!-- Input for description start -->
     <input type="text" id="description" name="description" class="form-control" value="<%= @listing.description %>">
-    <!-- Input for description end -->
   </div>
-  <!-- Label and input for description end -->
 
-  <!-- Label and input for creator_id start -->
-  <!-- Label and input for creator_id end -->
 
-  <!-- Label and input for quarter start -->
   <div class="form-group">
     <label for="quarter">
       Quarter
     </label>
 
-    <!-- Input for quarter start -->
     <input type="text" id="quarter" name="quarter" class="form-control" value="<%= @listing.quarter %>">
-    <!-- Input for quarter end -->
   </div>
-  <!-- Label and input for quarter end -->
 
-  <!-- Label and input for school_year start -->
   <div class="form-group">
     <label for="school_year">
       School year
     </label>
 
-    <!-- Input for school_year start -->
     <input type="text" id="school_year" name="school_year" class="form-control" value="<%= @listing.school_year %>">
-    <!-- Input for school_year end -->
   </div>
-  <!-- Label and input for school_year end -->
 
-  <!-- Label and input for tittle start -->
   <div class="form-group">
     <label for="tittle">
       Tittle
     </label>
 
-    <!-- Input for tittle start -->
     <input type="text" id="tittle" name="tittle" class="form-control" value="<%= @listing.tittle %>">
-    <!-- Input for tittle end -->
   </div>
-  <!-- Label and input for tittle end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update listing

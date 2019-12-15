@@ -11,107 +11,83 @@
         </a>
       </div>
 
-      <!-- Edit link transaction start -->
       <div class="col">
         <a href="/transactions/<%= @transaction.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit transaction
         </a>
       </div>
-      <!-- Edit link transaction end -->
 
-      <!-- Delete link transaction start -->
       <div class="col">
         <a href="/delete_transaction/<%= @transaction.id %>" class="btn btn-block btn-outline-secondary">
           Delete transaction
         </a>
       </div>
-      <!-- Delete link transaction end -->
     </div>
 
     <dl>
       <dt>
         Seller
       </dt>
-      <!-- Display seller_id start -->
       <dd>
         <%= @transaction.seller_id %>
       </dd>
-      <!-- Display seller_id end -->
 
       <dt>
         Buyer
       </dt>
-      <!-- Display buyer_id start -->
       <dd>
         <%= @transaction.buyer_id %>
       </dd>
-      <!-- Display buyer_id end -->
 
       <dt>
         Sold status
       </dt>
-      <!-- Display sold_status start -->
       <dd>
         <%= @transaction.sold_status %>
       </dd>
-      <!-- Display sold_status end -->
 
       <dt>
         Completed status
       </dt>
-      <!-- Display completed_status start -->
       <dd>
         <%= @transaction.completed_status %>
       </dd>
-      <!-- Display completed_status end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location start -->
       <dd>
         <%= @transaction.location %>
       </dd>
-      <!-- Display location end -->
 
       <dt>
         Time
       </dt>
-      <!-- Display time start -->
       <dd>
         <%= @transaction.time %>
       </dd>
-      <!-- Display time end -->
 
       <dt>
         Listing
       </dt>
-      <!-- Display listing_id start -->
       <dd>
         <%= @transaction.listing_id %>
       </dd>
-      <!-- Display listing_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@transaction.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@transaction.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
