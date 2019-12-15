@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form listing start -->
-<form action="/update_listing/<%= @listing.id %>" method="post">
+<form action="/update_listing/<%= @listing.id %>" method="post" enctype="multipart/form-data">
 <!-- Form listing end -->
 
   <!-- Label and input for transaction_id start -->
@@ -60,7 +60,8 @@
     </label>
 
     <!-- Input for photo_url start -->
-    <input type="text" id="photo_url" name="photo_url" class="form-control" value="<%= @listing.photo_url %>">
+    <%= cl_image_tag(@listing.photo_url.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="photo_url" name="photo_url" class="form-control">
     <!-- Input for photo_url end -->
   </div>
   <!-- Label and input for photo_url end -->

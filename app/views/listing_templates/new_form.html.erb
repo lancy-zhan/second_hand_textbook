@@ -6,7 +6,7 @@
 <hr>
 
 <!-- Form listing start -->
-<form action="/create_listing" method="post">
+<form action="/create_listing" method="post" enctype="multipart/form-data">
 <!-- Form listing end -->
 
   <!-- Label and input for transaction_id start -->
@@ -52,7 +52,7 @@
     </label>
 
     <!-- Input for photo_url start -->
-    <input type="text" id="photo_url" name="photo_url" class="form-control">
+    <input type="file" id="photo_url" name="photo_url" class="form-control">
     <!-- Input for photo_url end -->
   </div>
   <!-- Label and input for photo_url end -->
