@@ -13,17 +13,21 @@
 
       <!-- Edit link listing start -->
       <div class="col">
-        <a href="/listings/<%= @listing.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit listing
-        </a>
+        <% if current_user == @listing.creator %>
+          <a href="/listings/<%= @listing.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit listing
+          </a>
+        <% end %>
       </div>
       <!-- Edit link listing end -->
 
       <!-- Delete link listing start -->
       <div class="col">
-        <a href="/delete_listing/<%= @listing.id %>" class="btn btn-block btn-outline-secondary">
-          Delete listing
-        </a>
+        <% if current_user == @listing.creator %>
+          <a href="/delete_listing/<%= @listing.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete listing
+          </a>
+        <% end %>
       </div>
       <!-- Delete link listing end -->
     </div>
